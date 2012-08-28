@@ -53,6 +53,8 @@
 
 - (IBAction)importGoagentCA:(id)sender;
 
+- (IBAction)applySecondProxy:(id)sender;
+- (IBAction)applySecondProxyCustomDomainList:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 

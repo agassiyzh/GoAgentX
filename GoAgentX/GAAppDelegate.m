@@ -295,5 +295,18 @@
     [[NSWorkspace sharedWorkspace] openFile:[[NSBundle mainBundle] pathForResource:@"CA" ofType:@"crt" inDirectory:@"goagent"]];
 }
 
+- (IBAction)applySecondProxy:(id)sender {
+    if ([proxyService isRunning]) {
+        [proxyService toggleSystemProxy:NO];
+        [self performSelector:@selector(refreshSystemProxySettings:) withObject:nil afterDelay:0.1];
+    }
+}
+
+- (IBAction)applySecondProxyCustomDomainList:(id)sender {
+    if ([proxyService isRunning]) {
+        [proxyService toggleSystemProxy:NO];
+        [self performSelector:@selector(refreshSystemProxySettings:) withObject:nil afterDelay:0.1];
+    }
+}
 
 @end
